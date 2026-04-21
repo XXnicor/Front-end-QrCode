@@ -19,7 +19,8 @@ interface QrHistoryEntry {
 
 type AppState = "idle" | "loading" | "success" | "error";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL as string ?? "http://localhost:8080";
+const API_BASE_URL =
+  (import.meta.env.VITE_API_BASE_URL as string) || "https://geradorqrcodee.onrender.com";
 const API_URL = `${API_BASE_URL}/qrcode`;
 const HISTORY_KEY = "qr-history";
 const MAX_HISTORY = 6; 
